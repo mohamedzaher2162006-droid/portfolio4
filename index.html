@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Mohamed Zaher | Premium Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body{
+margin:0;
+font-family:'Cairo',sans-serif;
+background:#0d0d0d;
+color:#fff;
+direction:rtl;
+overflow-x:hidden;
+}
+
+.gold{color:#C9A86A;}
+
+.btn{
+background:#C9A86A;
+border:none;
+padding:12px 25px;
+cursor:pointer;
+transition:0.3s;
+}
+.btn:hover{
+background:#fff;
+color:#000;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#0d0d0d;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+#loader h1{
+color:#C9A86A;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{opacity:0.3;}
+50%{opacity:1;}
+100%{opacity:0.3;}
+}
+
+/* CURSOR */
+.cursor{
+position:fixed;
+width:20px;
+height:20px;
+border-radius:50%;
+background:#C9A86A;
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:9999;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1526378722484-cc5c510c9c64') center/cover fixed;
+}
+
+.hero h1{
+font-size:50px;
+background:linear-gradient(to right,#C9A86A,#fff);
+-webkit-background-clip:text;
+color:transparent;
+animation:fadeUp 1.5s;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* SECTION */
+.section{
+padding:80px 10%;
+text-align:center;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:10px;
+width:300px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 25px #C9A86A55;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project img{
+width:100%;
+transition:0.5s;
+}
+.project:hover img{
+transform:scale(1.1);
+}
+
+/* REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader"><h1>Mohamed Zaher</h1></div>
+
+<!-- CURSOR -->
+<div class="cursor"></div>
+
+<!-- NAV -->
+<nav>
+<div>Mohamed Zaher</div>
+<div>
+<a href="#">الرئيسية</a>
+<a href="projects.html">أعمالي</a>
+<a href="#pricing">الباقات</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>نحول مشروعك إلى <span class="gold">براند فاخر</span></h1>
+<p>تصميم مش بس شكل… ده بيزود ثقة العميل ويزود مبيعاتك</p>
+<p class="gold">+12 Logo | +13 Social Media | +4 Brand Identity</p>
+
+<a href="https://wa.me/201093524689">
+<button class="btn">ابدأ الآن</button>
+</a>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+<h2 class="gold">خدماتي</h2>
+
+<div class="cards">
+
+<div class="card reveal">
+<h3>Logo Design</h3>
+<p>12 تصميم لوجو احترافي</p>
+</div>
+
+<div class="card reveal">
+<h3>Social Media</h3>
+<p>13 تصميم سوشيال ميديا</p>
+</div>
+
+<div class="card reveal">
+<h3>Brand Identity</h3>
+<p>4 مشاريع هوية بصرية</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+<h2 class="gold">الباقات</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Starter</h3>
+<h2 class="gold">800 EGP</h2>
+<p>✔ لوجو</p>
+<p>✔ تعديلين</p>
+<p>✔ 3 أيام</p>
+<a href="https://wa.me/201093524689"><button class="btn">ابدأ</button></a>
+</div>
+
+<div class="card" style="border:2px solid #C9A86A;">
+<h3>Business 🔥</h3>
+<h2 class="gold">1500 EGP</h2>
+<p>✔ 2 Concepts</p>
+<p>✔ تعديلات مفتوحة</p>
+<p>✔ ملفات كاملة</p>
+<a href="https://wa.me/201093524689"><button class="btn">الأفضل</button></a>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<h2 class="gold">3000 EGP</h2>
+<p>✔ هوية كاملة</p>
+<p>✔ سوشيال</p>
+<p>✔ دعم شهر</p>
+<a href="https://wa.me/201093524689"><button class="btn">ابدأ مشروعك</button></a>
+</div>
+
+</div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+<h2 class="gold">لماذا تختارني؟</h2>
+
+<div class="cards">
+<div class="card reveal"><h3>تصميم يبيع</h3></div>
+<div class="card reveal"><h3>احترافية</h3></div>
+<div class="card reveal"><h3>نتائج واضحة</h3></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+<h2>تواصل معي</h2>
+<p>01093524689</p>
+<a href="https://wa.me/201093524689">
+<button class="btn">واتساب</button>
+</a>
+</section>
+
+<script>
+
+/* LOADER */
+window.addEventListener("load",()=>{
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},1200);
+});
+
+/* CURSOR */
+document.addEventListener("mousemove",(e)=>{
+document.querySelector(".cursor").style.left=e.clientX+"px";
+document.querySelector(".cursor").style.top=e.clientY+"px";
+});
+
+/* SCROLL */
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".reveal").forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("active");
+}
+});
+});
+
+</script>
+
+</body>
+</html>
